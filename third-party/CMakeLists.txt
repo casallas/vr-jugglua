@@ -13,6 +13,7 @@ if(BUILD_EMBEDDED_LUA)
 	set(LUA_LIBRARY lua)
 	set(LUA_LIBRARIES lua)
 	set(LUA_LIBRARIES ${LUA_LIBRARIES} PARENT_SCOPE)
+	set(LUA_INTERPRETER "lua-interp")
 	set(LUA51_FOUND YES)
 
 	if(BUILD_LUA_AS_CPP)
@@ -33,7 +34,6 @@ add_subdirectory(stdlib/modules)
 
 add_subdirectory(lua_modules)
 
-set(LUA_INTERPRETER "lua-interp")
 add_subdirectory(luarocks)
 include(luarocks/UseLuarocks.cmake)
 

@@ -53,7 +53,7 @@ option(BUILD_WITH_CPPINTROSPECTION "Build against cppintrospection instead of os
 option(BUILD_EMBEDDED_LUA "Build Lua, LuaBind, and osgLua as a part of the app - highly recommended." ON)
 option(BUILD_LUA_UTILS "Build a stock, standalone lua-interpreter and luac" ON)
 option(BUILD_SHARED_OSGLUA "Whether to also build a DLL/.so version of osgLua." OFF)
-option(BUILD_LUA_AS_CPP "Build Lua as C++, rather than C - recommended." ON)
+option(BUILD_LUA_AS_CPP "Build Lua as C++, rather than C - makes this build incompatible with many third-party Lua modules." OFF)
 option(BUILD_VERY_VERBOSE "Turn on excessive amounts of runtime output." OFF)
 
 # Mark some as advanced

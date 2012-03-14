@@ -7,8 +7,10 @@ endif()
 if(BUILD_EMBEDDED_LUA)
 	# Lua 5.1.5
 	add_subdirectory(lua-5.1.5/src)
-	set(LUA_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/lua-5.1.5/src")
+	set(LUA_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lua-5.1.5/src")
+	set(LUA_INCLUDE_DIRS "${LUA_INCLUDE_DIR}")
 	set(LUA_INCLUDE_DIRS ${LUA_INCLUDE_DIRS} PARENT_SCOPE)
+	set(LUA_LIBRARY lua)
 	set(LUA_LIBRARIES lua)
 	set(LUA_LIBRARIES ${LUA_LIBRARIES} PARENT_SCOPE)
 	set(LUA51_FOUND YES)
@@ -30,3 +32,6 @@ endif()
 add_subdirectory(stdlib/modules)
 
 add_subdirectory(lua_modules)
+
+set(LUA_INTERPRETER "lua-interp")
+add_subdirectory(luarocks)

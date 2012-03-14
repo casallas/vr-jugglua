@@ -35,3 +35,6 @@ add_subdirectory(lua_modules)
 
 set(LUA_INTERPRETER "lua-interp")
 add_subdirectory(luarocks)
+include(luarocks/UseLuarocks.cmake)
+
+luarocks_install(luarocks-luafilesystem luafilesystem ${CMAKE_CURRENT_BINARY_DIR}/rockstree)

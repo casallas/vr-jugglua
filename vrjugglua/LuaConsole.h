@@ -63,7 +63,8 @@ namespace vrjLua {
 			public:
 				template<typename T>
 				std::ostream & operator<<(T const& val) {
-					return LuaConsoleOutputProxy(_console, val);
+					LuaConsoleOutputProxy luaOutProxy(_console, val);
+					return luaOutProxy._stream;
 				}
 
 

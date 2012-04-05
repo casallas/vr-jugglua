@@ -138,7 +138,6 @@ endif()
 if(NOT BUILD_WITH_CPPINTROSPECTION)
 	set(OSGINTROSPECTION_COMPONENT osgIntrospection)
 endif()
-include(SearchProgramFilesForOpenSceneGraph)
 find_package(OpenSceneGraph REQUIRED COMPONENTS osgDB osgUtil ${OSGINTROSPECTION_COMPONENT})
 
 if(APPLE)

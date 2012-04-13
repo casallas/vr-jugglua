@@ -338,7 +338,7 @@ install(DIRECTORY examples
 install(DIRECTORY assets
 	DESTINATION ${SHARE_DIR} COMPONENT recommendedassets)
 
-include(InstallRequiredSystemLibraries)
+#include(InstallRequiredSystemLibraries)
 
 # Choose desired package generators
 if(APPLE)
